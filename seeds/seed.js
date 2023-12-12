@@ -5,9 +5,9 @@ const {Book, Review, User} = require('../models');
 const {hashMultiplePasswords} = require('../utils/hash-password.js')
 
 
-const userData = require('./userData.json');
-const bookData = require('./bookData.json');
-const reviewData = require('./reviewData.json');
+const userData = require('./user-data.json');
+const bookData = require('./book-data.json');
+const reviewData = require('./review-data.json');
 
 
 

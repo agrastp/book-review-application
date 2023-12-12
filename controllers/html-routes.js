@@ -224,9 +224,10 @@ router.get('/dashboard', baseAuthenticateWhetherLoggedIn, async (req, res) => {
             reviewInQuestion,
             loggedInUser: req.session.loggedInUser,
             loggedInUsername: req.session.loggedInUser.username
-        })
+        });
     }
     catch (err) {
+
         console.log("error", err);
         res.status(500).json(err);
     }
@@ -241,6 +242,7 @@ router.get('/create-update-delete-review/:id', baseAuthenticateWhetherLoggedIn, 
         const book = bookData.get({plain: true});
 
         res.render('create-update-delete-review', {
+
             book: book,
             loggedInUser: req.session.loggedInUser,
             newElement: true

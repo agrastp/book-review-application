@@ -5,9 +5,10 @@ const  sessionSaveWithPromise = require('../../utils/session-promise-save.js');
 
 // CREATE new user
 router.post('/signup', passport2.authenticate('signup'), async (req, res) => {
+    
     try {
-
-            if(req.invalidUsername === "true"){
+        
+        if(req.invalidUsername === "true"){
 
             res.redirect('/signup?invalidUsername=true');
 
@@ -64,17 +65,26 @@ router.get('/logout', (req, res) => {
 
   req.session.loggedInUser
 
-  if (req.session.loggedInUser) {
+    try{
 
-    req.session.destroy(() => {
+        if (req.session.loggedInUser) {
 
-        res.redirect(301, '/login');
-    });
+            req.session.destroy(() => {
+        
+                res.redirect(301, '/login');
+            });
+        
+        } else {
+        
+            res.redirect(301, '/login');
+        }
+  
+    } catch(error) {
 
-  } else {
+        console.log(error);
+        res.status(500).json(error);
+    }
 
-    res.status(404).end();
-  }
 });
 
 module.exports = router;

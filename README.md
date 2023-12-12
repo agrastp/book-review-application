@@ -46,7 +46,7 @@ I, [Gabriel Morrow](https://github.com/theboss1485/), worked with [Villy Yeoh](h
 -Module 13 and 14 Challenges and class examples used as references and common code<br>
 -[Canva](https://www.canva.com) was utilized to create the logo image <br>
 
-I, Gabriel, took Passport documentation from the following two URLs in order to use it in the program: (https://www.passportjs.org/packages/passport-local/)[https://www.passportjs.org/packages/passport-local/] and (https://www.passportjs.org/tutorials/password/verify/)[https://www.passportjs.org/tutorials/password/verify/]
+I, Gabriel, took Passport documentation from the following two URLs in order to use it in the program: [https://www.passportjs.org/packages/passport-local/](https://www.passportjs.org/packages/passport-local/) and [https://www.passportjs.org/tutorials/password/verify/](https://www.passportjs.org/tutorials/password/verify/)
 
 ## License
 

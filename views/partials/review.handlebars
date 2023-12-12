@@ -5,7 +5,7 @@ a single book and reviews.--}}
         <section id="single-book-review-{{{review.id}}}" class="box custom-review-box has-background-primary-light">
             <h2 class="custom-review-title"><strong>{{review.title}}</strong></h2>
             <p>{{review.content}}</p>
-            <p class="custom-review-name-date">Posted by <span class="custom-text-light-blue">{{review.user.username}}</span> on {{format_date createdAt}}</p>
+            <p class="custom-review-name-date">Posted by <span class="has-text-info-dark">{{review.user.username}}</span> on {{format_date createdAt}}</p>
             {{#if (equals review.user.id ../loggedInUser.id)}}
                 <section class="is-flex justify-center">
                     <button id="edit-delete-review-button-{{{count @index}}}" class="button is-primary" data-review-Id={{{review.id}}} data-book-Id={{{../id}}}>Edit or Delete!</button>
